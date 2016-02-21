@@ -9,4 +9,61 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.dieaigar.wwtbam.PlayActivity">
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Play for: "
+        android:id="@+id/tvPrize"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Question: "
+        android:id="@+id/tvQuestionNumber"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Question"
+        android:id="@+id/tvQuestion"
+        android:layout_below="@+id/tvQuestionNumber"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp" />
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Answer 1"
+        android:id="@+id/bAnswer1"
+        android:layout_below="@+id/tvQuestion"
+        android:layout_marginTop="38dp" />
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Answer 2"
+        android:id="@+id/bAnswer2"
+        android:layout_below="@+id/bAnswer1"/>
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Answer 3"
+        android:id="@+id/bAnswer3"
+        android:layout_below="@+id/bAnswer2" />
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Answer 4"
+        android:id="@+id/bAnswer4"
+        android:layout_below="@+id/bAnswer3" />
+
 </RelativeLayout>

@@ -7,4 +7,9 @@
     <string name="settings_bAddFriend">Add friend</string>
     <string name="hint_name">Enter your name</string>
     <string name="hint_friend">Enter your friend\'s name</string>
+    <string name="menu_publico">Joker 1</string>
+    <string name="menu_llamada">Joker 2</string>
+    <string name="menu_cincuenta">Joker 3</string>
+    <string name="menu_abandonar">Leave</string>
+
 </resources>
