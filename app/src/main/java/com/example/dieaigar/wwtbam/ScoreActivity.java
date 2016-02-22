@@ -8,6 +8,7 @@ import android.widget.TableRow;
 import android.widget.TextView;
 
 public class ScoreActivity extends AppCompatActivity {
+    static int rows = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -16,28 +17,35 @@ public class ScoreActivity extends AppCompatActivity {
 
         TabHost host = (TabHost) findViewById(R.id.tabHost);
         host.setup();
-        TabHost.TabSpec spec = host.newTabSpec("TAB1");
-        spec.setIndicator("Label1");
-        spec.setContent(R.layout.tab_layout);
+
+        TabHost.TabSpec spec = host.newTabSpec("LOCALTAB");
+        spec.setIndicator("Local");
+        spec.setContent(R.id.tab_layout_included);
         host.addTab(spec);
 
-        spec = host.newTabSpec("TAB2");
-        spec.setIndicator("Label2");
-        spec.setContent(R.layout.tab_layout);
+        spec = host.newTabSpec("FRIENDSTAB");
+        spec.setIndicator("Friends");
+        spec.setContent(R.id.tab_layout_included);
         host.addTab(spec);
 
+        addRow(10, "Pablo");
+        addRow(100, "Diego");
     }
 
-    private void addRow(){
+    private void addRow(int score, String name){
         TableLayout tl = (TableLayout) findViewById(R.id.score_table);
 
         TableRow row = new TableRow(this);
 
-        TextView tv = new TextView(this);
-        tv.setText("asd");
+        TextView tvName = new TextView(this);
+        tvName.setText(name);
 
-        row.addView(tv);
+        TextView tvScore = new TextView(this);
+        tvScore.setText(score + "");
 
-        tl.addView(row, 0);
+        row.addView(tvName);
+        row.addView(tvScore);
+
+        tl.addView(row, rows++);
     }
 }
